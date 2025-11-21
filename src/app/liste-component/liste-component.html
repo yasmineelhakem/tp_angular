@@ -1,0 +1,8 @@
+<div class="liste-container">
+  <h3 class="text-center mb-4">Liste des CVs</h3>
+  <div class="cv-list">
+    @for (cv of cvs; track cv.id) {
+      <app-item-component [cv]="cv" (click)="onSelectCv(cv)"></app-item-component>
+    }
+  </div>
+</div>

@@ -1,0 +1,31 @@
+import { Cv } from '../models/cv.model';
+
+export const CVS: Cv[] = [
+  {
+    id: 1,
+    name: 'salim ',
+    firstname: 'dibala',
+    age: 30,
+    cin: '12345678',
+    job: 'Teacher',
+    path: 'https://randomuser.me/api/portraits/men/1.jpg'
+  },
+  {
+    id: 2,
+    name: 'ahmed ',
+    firstname: 'benahmed',
+    age: 35,
+    cin: '87654321',
+    job: 'Developer',
+    path: 'https://randomuser.me/api/portraits/men/32.jpg'
+  },
+  {
+    id: 3,
+    name: 'ali ',
+    firstname: 'benali  ',
+    age: 28,
+    cin: '11223344',
+    job: 'Designer',
+    path: 'https://randomuser.me/api/portraits/men/44.jpg'
+  }
+];

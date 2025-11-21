@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <app-liste-component (cvSelected)="onCvSelected($event)"></app-liste-component>
+    </div>
+    <div class="col-md-8">
+      <app-detail-component [cv]="selectedCv"></app-detail-component>
+    </div>
+  </div>
+</div>

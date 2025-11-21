@@ -1,0 +1,17 @@
+.liste-container {
+  background-color: #a8c5c5;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 500px;
+}
+
+.liste-container h3 {
+  color: #333;
+  font-weight: 600;
+}
+
+.cv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

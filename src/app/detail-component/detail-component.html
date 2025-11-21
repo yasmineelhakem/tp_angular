@@ -1,0 +1,33 @@
+<div class="detail-container">
+  <div *ngIf="cv; else noSelection" class="detail-content">
+    <div class="text-center mb-4">
+      <img [src]="cv.path" [alt]="cv.firstname + ' ' + cv.name" class="cv-photo">
+    </div>
+    <div class="cv-info">
+      <h3 class="text-center mb-4">{{ cv.firstname }} {{ cv.name }}</h3>
+      <div class="info-item">
+        <strong>ID:</strong> <span>{{ cv.id }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Nom:</strong> <span>{{ cv.name }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Prénom:</strong> <span>{{ cv.firstname }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Âge:</strong> <span>{{ cv.age }}</span>
+      </div>
+      <div class="info-item">
+        <strong>CIN:</strong> <span>{{ cv.cin }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Job:</strong> <span>{{ cv.job }}</span>
+      </div>
+    </div>
+  </div>
+  <ng-template #noSelection>
+    <div class="no-selection">
+      <p>Veuillez sélectionner un CV pour voir les détails</p>
+    </div>
+  </ng-template>
+</div>

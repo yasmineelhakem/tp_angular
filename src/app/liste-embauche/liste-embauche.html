@@ -1,0 +1,21 @@
+@if (embauches().length > 0) {
+<h4 class="mb-3">Liste des personnes pré-sélectionnées :</h4>
+}
+<div class="d-flex flex-wrap gap-3">
+  @for (person of embauches(); track person.id) {
+    <div class="card d-flex flex-row align-items-center p-2 shadow-sm" style="min-width: 250px;">
+      <img 
+        [src]="person.path"
+        class="rounded-circle me-3"
+        style="width: 60px; height: 60px; object-fit: cover;"
+      />
+
+      <div>
+        <h6 class="mb-0">{{ person.firstname }} {{ person.name }}</h6>
+        <small class="text-muted">{{ person.job }}</small>
+      </div>
+    </div>
+  }
+</div>
+
+

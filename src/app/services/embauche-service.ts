@@ -8,16 +8,16 @@ export class EmbaucheService {
 
   embauches = signal<Cv[]>([]);
 
-  constructor() {}
-
   embaucher(cv: Cv) {
     // éviter les doublons
-    if (!this.embauches().some(c => c.id === cv.id)) {
-      this.embauches.update(old => [...old, cv]);
+    if (this.embauches().some((c) => c.id === cv.id)) {
+        alert("Cette personne est déjà embauchée");
+        return;
     }
+
+    // ajouter un cv à embaucher 
+    this.embauches.update(list => [...list, cv]);
+
   }
 
-  getEmbauches() {
-    return this.embauches();
-  }
 }

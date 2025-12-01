@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { ListeComponent } from "../liste-component/liste-component";
 import { DetailComponent } from "../detail-component/detail-component";
 import { Cv } from '../models/cv.model';
-
+import { ListeEmbauche } from '../liste-embauche/liste-embauche';
 @Component({
   selector: 'app-cv-component',
-  imports: [ListeComponent, DetailComponent],
+  imports: [ListeComponent, DetailComponent, ListeEmbauche],
   templateUrl: './cv-component.html',
   styleUrl: './cv-component.css',
 })

@@ -1,7 +1,8 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, inject } from '@angular/core';
 import { CVS } from '../data/cvs.data';
 import { Cv } from '../models/cv.model';
 import { ItemComponent } from '../item-component/item-component';
+import { CvService } from '../services/cv-service';
 
 @Component({
   selector: 'app-liste-component',
@@ -10,7 +11,10 @@ import { ItemComponent } from '../item-component/item-component';
   styleUrl: './liste-component.css',
 })
 export class ListeComponent {
-  cvs = CVS;
+
+  private cvService = inject(CvService);
+  cvs = this.cvService.cvs;
+
   @Output() cvSelected = new EventEmitter<Cv>();
 
   onSelectCv(cv: Cv): void {

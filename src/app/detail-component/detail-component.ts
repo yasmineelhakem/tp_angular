@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Cv } from '../models/cv.model';
+import { EmbaucheService } from '../services/embauche-service';
 
 @Component({
   selector: 'app-detail-component',
@@ -10,4 +11,10 @@ import { Cv } from '../models/cv.model';
 })
 export class DetailComponent {
   @Input() cv: Cv | null = null;
+
+  private embaucheService = inject(EmbaucheService);
+
+  embaucher() {
+    if (!this.cv) return; 
+    this.embaucheService.embaucher(this.cv);  }
 }

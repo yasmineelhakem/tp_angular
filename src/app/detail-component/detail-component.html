@@ -25,6 +25,13 @@
       </div>
     </div>
   </div>
+
+  <div *ngIf="cv; else noSelection" class="detail-content">
+    <button class="btn btn-danger" (click)="embaucher()">
+      Embaucher
+    </button>
+  </div>
+
   <ng-template #noSelection>
     <div class="no-selection">
       <p>Veuillez sélectionner un CV pour voir les détails</p>

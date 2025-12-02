@@ -23,13 +23,13 @@
       <div class="info-item">
         <strong>Job:</strong> <span>{{ cv.job }}</span>
       </div>
+
+      <button class="btn btn-danger me-2" (click)="deleteCv()">
+        Supprimer
+      </button>
       
     </div>
-    <div *ngIf="cv; else noSelection" class="detail-content">
-      <button class="btn btn-danger" (click)="embaucher()">
-        Embaucher
-      </button>
-    </div>
+ 
   </div>
 
   <ng-template #noSelection>

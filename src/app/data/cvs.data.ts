@@ -8,7 +8,16 @@ export const CVS: Cv[] = [
     age: 30,
     cin: '12345678',
     job: 'Teacher',
-    path: 'https://randomuser.me/api/portraits/men/1.jpg'
+    path: 'https://randomuser.me/api/portraits/men/1.jpg',
+    favoriteQuote: "tant qu'il y a de la vie il y a de l'espoir",
+    workDescription: "J'enseigne aux étudiants les technos du Web",
+    keywords: "HTML CSS JS PHP Symfony Angular",
+    motto: "To be or not to be, this is my awesome motto!",
+    stats: {
+      followers: 235,
+      following: 114,
+      projects: 35
+    }  
   },
   {
     id: 2,
@@ -17,7 +26,16 @@ export const CVS: Cv[] = [
     age: 35,
     cin: '87654321',
     job: 'Developer',
-    path: 'https://randomuser.me/api/portraits/men/32.jpg'
+    path: 'https://randomuser.me/api/portraits/men/32.jpg',
+    favoriteQuote: "tant qu'il y a de la vie il y a de l'espoir",
+    workDescription: "J'enseigne aux étudiants les technos du Web",
+    keywords: "HTML CSS JS PHP Symfony Angular",
+    motto: "To be or not to be, this is my awesome motto!",
+    stats: {
+      followers: 235,
+      following: 114,
+      projects: 35
+    }
   },
   {
     id: 3,
@@ -26,6 +44,15 @@ export const CVS: Cv[] = [
     age: 28,
     cin: '11223344',
     job: 'Designer',
-    path: 'https://randomuser.me/api/portraits/men/44.jpg'
+    path: 'https://randomuser.me/api/portraits/men/44.jpg',
+    favoriteQuote: "tant qu'il y a de la vie il y a de l'espoir",
+    workDescription: "J'enseigne aux étudiants les technos du Web",
+    keywords: "HTML CSS JS PHP Symfony Angular",
+    motto: "To be or not to be, this is my awesome motto!",
+    stats: {
+      followers: 235,
+      following: 114,
+      projects: 35
+    }
   }
 ];

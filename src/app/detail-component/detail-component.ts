@@ -1,7 +1,8 @@
 import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Cv } from '../models/cv.model';
-import { EmbaucheService } from '../services/embauche-service';
+import { ActivatedRoute } from '@angular/router';
+import { CvService } from '../services/cv-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-detail-component',
@@ -10,11 +11,16 @@ import { EmbaucheService } from '../services/embauche-service';
   styleUrl: './detail-component.css',
 })
 export class DetailComponent {
-  @Input() cv: Cv | null = null;
 
-  private embaucheService = inject(EmbaucheService);
-
-  embaucher() {
-    if (!this.cv) return; 
-    this.embaucheService.embaucher(this.cv);  }
+  route = inject(ActivatedRoute);
+  cvService = inject(CvService);
+  router = inject(Router);
+  
+  cv = this.cvService.getCvById(Number(this.route.snapshot.paramMap.get('id')));
+  
+  deleteCv() {
+    if (!this.cv) return;
+    this.cvService.deleteCv(this.cv.id);
+    this.router.navigate(['/cv']);
+  }
 }

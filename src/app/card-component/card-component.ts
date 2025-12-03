@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-carte',
   standalone: true,
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule],
   templateUrl: './card-component.html',
   styleUrl: './card-component.css',
 })

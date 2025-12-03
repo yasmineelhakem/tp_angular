@@ -1,6 +1,5 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CvComponent } from "./cv-component/cv-component";
 import { Header } from './header/header';
 
 @Component({

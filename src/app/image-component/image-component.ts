@@ -15,12 +15,13 @@ export class ImageComponent implements OnInit {
   @Input() height: string = '200px';       
   @Input() intervalTime: number = 2000; 
 
-  currentImage: string = '';
+  //currentImage: string = '';
 
   currentImage$!: Observable<string>;
 
    ngOnInit() {
     this.currentImage$ = interval(this.intervalTime).pipe(
+      // 0 1 2 3 4 5 6 7 8 9
       map(i => this.images[i % this.images.length]),
       startWith(this.images[this.images.length-1])
     );
